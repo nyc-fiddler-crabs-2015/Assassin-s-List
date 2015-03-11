@@ -4,12 +4,18 @@ end
 
 get '/login' do
   if request.xhr?
-  erb :login, layout: false
- end
+    erb :login, layout: false
+  else
+    erb :login
+  end
 end
 
 get '/signup' do
+  if request.xhr?
+  erb :signup, layout: false
+  else
   erb :signup
+  end
 end
 
 get '/logout' do

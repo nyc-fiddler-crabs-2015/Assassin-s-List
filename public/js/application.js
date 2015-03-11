@@ -46,8 +46,8 @@ $(document).ready(function() {
  });
 
 
-window.setInterval( function(){
-   $("#signup_button").fadeOut( 'slow' ).delay( 1000 ).fadeIn( 1000 )
-}, 7000 );
+// window.setInterval( function(){
+//    $("#signup_button").fadeOut( 'slow' ).delay( 1000 ).fadeIn( 1000 )
+// }, 7000 );
 
 });
