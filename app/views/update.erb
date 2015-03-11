@@ -1,3 +1,4 @@
+<div id='updateform'>
 <form class="update <%=@post.id%>" action="/posts/<%=@post.id%>" method="POST">
   <input type ="hidden" name="_method" value="PUT">
   <input type="text" name="name" placeholder="place target name"><br>
@@ -8,3 +9,4 @@
   <input type="text" name="tagline" placeholder="put their tagline">
   <input type="submit" value="Submit!">
 </form>
+</div>

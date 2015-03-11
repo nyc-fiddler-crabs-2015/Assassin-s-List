@@ -3,7 +3,9 @@ get '/' do
 end
 
 get '/login' do
-  erb :login
+  if request.xhr?
+  erb :login, layout: false
+ end
 end
 
 get '/signup' do

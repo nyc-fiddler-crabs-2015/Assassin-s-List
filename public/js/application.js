@@ -10,7 +10,6 @@ $(document).ready(function() {
   });
  });
 
-
  $("#signup_button").on("click",function(event){
   event.preventDefault();
   $.ajax({
@@ -34,4 +33,21 @@ $(document).ready(function() {
     $('#' + target_id).remove();
    });
  });
+
+ $(".update_button").on("click",function(event){
+  event.preventDefault();
+  $.ajax({
+    type:'get',
+    responseType:'document',
+    url:'/posts/:id/edit',
+  }).success(function(response){
+    $('#updateform').append(response)
+  });
+ });
+
+
+window.setInterval( function(){
+   $("#signup_button").fadeOut( 'slow' ).delay( 1000 ).fadeIn( 1000 )
+}, 7000 );
+
 });
