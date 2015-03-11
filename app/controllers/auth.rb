@@ -1,5 +1,5 @@
 get '/' do
-   erb :index
+   erb :welcome
 end
 
 get '/login' do
