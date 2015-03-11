@@ -16,3 +16,4 @@ end
 def session
   @session ||= {}
 end
+

@@ -10,8 +10,10 @@ gem 'activesupport'
 gem 'activerecord'
 
 gem 'rake'
+gem 'faker'
 
 gem 'bcrypt'
+gem 'shotgun'
 
 group :test do
   gem 'rspec'
