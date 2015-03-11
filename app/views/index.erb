@@ -1,5 +1,13 @@
-<p>ASSASSIN'S LISTS</p>
+<h1>Welcome!</h1>
+This is the lists!
 
 
+<ul>
+<% @posts.each do |post| %>
+  <a href="/posts/<%= post.id %>"><li> <%= post.name %></li></a>
+  <p> <%= post.user.name %> </p>
+<% end %>
+</ul>
 
-<p><a href="/signup">Don't have an account?  Sign Up here!</a><p>
+
+<a href="/post/new">Create a new post</a>

@@ -1,8 +1,10 @@
 
+
 get '/index' do
   @posts = Post.all
   erb :posts
 end
+
 
 get '/posts' do
   @posts = Post.all
@@ -23,25 +25,24 @@ get '/posts/:id' do
   erb :post
 end
 
-post '/posts' do
-  @user = current_user
-  @post = @user.posts.create(title: params[:title], content: params[:content])
-  redirect "/posts/#{@post.id}"
-end
-
 delete '/posts/:id' do |id|
   Post.destroy(id)
+end
+
+post '/posts' do
+  @user = current_user
+  @post = @user.posts.create(name: params[:name], location: params[:location], crime: params[:crime], bounty: params[:bounty],pic_url: params[:pic_url],tagline: params[:tagline])
+  redirect "/posts/#{@post.id}"
 end
 
 put '/posts/:id' do
   id = params[:id]
   @post = Post.find(id)
-  @post.update(id: id, user_id: current_user.id, title: params[:title], content: params[:content])
+  @post.update(id: id, user_id: current_user.id, name: params[:name], location: params[:location], crime: params[:crime], bounty: params[:bounty],pic_url: params[:pic_url],tagline: params[:tagline])
  redirect "/posts"
 end
 
 post '/post/new' do
-  @post = Post.create(title: params[:title], content: params[:content])
+    @post = Post.create(name: params[:name], location: params[:location], crime: params[:crime], bounty: params[:bounty],pic_url: params[:pic_url],tagline: params[:tagline])
   redirect "/posts"
 end
-
