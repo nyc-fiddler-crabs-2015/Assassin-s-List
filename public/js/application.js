@@ -1,7 +1,28 @@
-
-
 $(document).ready(function() {
-    $(".delete").on("click",function(event){
+ $("#login_button").on("click",function(event){
+  event.preventDefault();
+  $.ajax({
+    type:'get',
+    url:'/login'
+  }).success(function(response){
+    $("#login_button").after('<div class="response">' + response + '</div>');
+    $("#login_button").hide();
+  });
+ });
+
+
+ $("#signup_button").on("click",function(event){
+  event.preventDefault();
+  $.ajax({
+    type:'get',
+    responseType:'document',
+    url:'/signup',
+  }).success(function(response){
+    $('.ajaxbottom').append(response)
+  });
+ });
+
+ $(".delete").on("click",function(event){
    event.preventDefault();
    var target = $(event.target);
    var url = target.attr('href');
@@ -9,8 +30,8 @@ $(document).ready(function() {
    $.ajax({
     type:'delete',
     url: url
-   }).success(function(response){
+   }).success(function(){
     $('#' + target_id).remove();
    });
-  });
+ });
 });
