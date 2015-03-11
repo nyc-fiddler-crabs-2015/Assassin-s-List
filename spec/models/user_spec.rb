@@ -1,11 +1,11 @@
 require_relative '../spec_helper'
 
-describe 'User Model' do
-  let(:valid_user) { User.new(name: 'kim',password: '1234' ) }
+describe 'Model' do
 
-  it 'saved a valid user to the database' do
-    valid_user.save
-    saved_user = User.find_by(name: 'kim')
-    expect(saved_user.password).to eq('1234')
+  describe "create user" do
+  let(:user) {User.create(name: 'danny', password: '1234' ) }
+  it 'create a new user' do
+    expect(User.find_by(name: 'danny').name).to eq('danny')
   end
+ end
 end

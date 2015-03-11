@@ -7,7 +7,7 @@
   <script src='/js/application.js'></script>
   <title><%= @title || "Assassins'Lists" %></title>
 </head>
-<body>
+ <body class="assasin-bg">
    <div id="content">
   <header>
    <div id="login-toolbar">
@@ -15,7 +15,7 @@
         <a href="/logout">Logout  |</a>
         <a href="/posts"> Posts  |</a>
         <a href="/profiles/<%= current_user.id%>"> Your profile  |</a>
-        <a href="/comments"> Comments </a>
+        <a href="/comments"> Recent comments </a>
       <% else %>
         <a id="login_button" href="/login">Login</a>
       <% end %>

@@ -36,18 +36,20 @@ $(document).ready(function() {
 
  $(".update_button").on("click",function(event){
   event.preventDefault();
+   var target = $(event.target);
+   var url = target.attr('href');
+   var target_id = target.attr('href').split('/')[1];
   $.ajax({
     type:'get',
-    responseType:'document',
-    url:'/posts/:id/edit',
+    url: url
   }).success(function(response){
-    $('#updateform').append(response)
+    $('.posts').append(response)
   });
  });
 
 
 // window.setInterval( function(){
-//    $("#signup_button").fadeOut( 'slow' ).delay( 1000 ).fadeIn( 1000 )
+//    $("#head").fadeOut( 'slow' ).delay( 1000 ).fadeIn( 1000 )
 // }, 7000 );
 
 });

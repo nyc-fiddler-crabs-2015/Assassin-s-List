@@ -1,6 +1,6 @@
 /* CSS declarations go here */
-body {font-family: Vollkorn; font-size: 160%; line-height: 160%; }
-h1, h2, h3, h4, h5, h6 {font-family: Georgia; line-height:100%; margin-top: 0.5em; margin-bottom: 0.5em; color: #36AECC; font-style: italic; font-weight: 400;}
+body {font-family: sans-serif; font-size: 160%; line-height: 160%; }
+h1, h2, h3, h4, h5, h6 {font-family: Georgia; line-height:100%; margin-top: 0.5em; margin-bottom: 0.5em; color: #36AECC; font-weight: 400;}
 h1 {font-size: 1.8em;}
 h2 {font-size: 1.6em;}
 h3 {font-size: 1.4em;}
@@ -35,4 +35,25 @@ footer { font-size: 0.7em; margin-top: 2em;}
 }
 
 #signtop { margin-top:100px;
+}
+
+input[type='submit'] {
+  border-radius: 5px;
+  border: 1px black solid;
+  background: white;
+}
+
+input[type='submit']:active {
+  background: grey;
+}
+.assasin-bg{
+background: url("/images/assassin.png");
+  background-size: cover;
+}
+
+.posts li {
+  list-style: none;
+}
+.posts li a{
+  text-decoration: none;
 }
