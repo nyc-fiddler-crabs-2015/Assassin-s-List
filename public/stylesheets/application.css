@@ -57,3 +57,6 @@ background: url("/images/assassin.png");
 .posts li a{
   text-decoration: none;
 }
+#signup_button {
+  float:right;
+}

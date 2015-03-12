@@ -1,6 +1,5 @@
 require_relative '../spec_helper'
 
-
 describe 'CONTROLLER' do
   let(:user) {User.create(name: "kane", password: "123")}
 
